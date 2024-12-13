@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="professors">
+        <item>Carles Salinas</item>
+        <item>Jose Javier Faro</item>
+        <item>Valentina Díaz</item>
+        <item>Ricardo Morales</item>
+        <item>Daniela Vega</item>
+        <item>Javier Méndez</item>
+        <item>Olivia Márquez</item>
+        <item>Iván Escobar</item>
+    </string-array>
+    <string-array name="groups">
+        <item>DAM1A</item>
+        <item>DAM1B</item>
+        <item>DAW1A</item>
+        <item>DAW1B</item>
+    </string-array>
+    <string-array name="rooms">
+        <item>A01</item>
+        <item>A02</item>
+        <item>A03</item>
+        <item>A04</item>
+    </string-array>
+    <string-array name="student_name_samples">
+        <item>Ana López</item>
+        <item>Diego Torres</item>
+        <item>María González</item>
+        <item>Carlos Pérez</item>
+        <item>Lucía Fernández</item>
+        <item>Juan Martínez</item>
+        <item>Sofía Ramírez</item>
+        <item>José Herrera</item>
+        <item>Camila Ortiz</item>
+        <item>Andrés Castro</item>
+        <item>Valentina Díaz</item>
+        <item>Ricardo Morales</item>
+        <item>Daniela Vega</item>
+        <item>Javier Méndez</item>
+        <item>Gabriela Ruiz</item>
+        <item>Laura Jiménez</item>
+        <item>Pedro Silva</item>
+        <item>Martina Rojas</item>
+        <item>Mateo Gutiérrez</item>
+        <item>Isabel Castillo</item>
+        <item>Francisco Romero</item>
+        <item>Clara Navarro</item>
+        <item>Hugo Álvarez</item>
+        <item>Paula Serrano</item>
+        <item>Álvaro Suárez</item>
+        <item>Elena Mendoza</item>
+        <item>Mario Peña</item>
+        <item>Adriana Cruz</item>
+        <item>Fernando Soto</item>
+        <item>Victoria Espinosa</item>
+        <item>Emilio Aguilar</item>
+        <item>Carmen Delgado</item>
+        <item>Manuel Ramos</item>
+        <item>Julia Paredes</item>
+        <item>Rafael Reyes</item>
+        <item>Alicia Benítez</item>
+        <item>Santiago Vargas</item>
+        <item>Esther Muñoz</item>
+        <item>Felipe Ortiz</item>
+        <item>Natalia Cabrera</item>
+        <item>Tomás Maldonado</item>
+        <item>Amelia Sosa</item>
+        <item>Guillermo Campos</item>
+        <item>Andrea Morales</item>
+        <item>Lucas Quintana</item>
+        <item>Olivia Márquez</item>
+        <item>Iván Escobar</item>
+        <item>Sara Varela</item>
+        <item>Alfredo Vega</item>
+        <item>Teresa Luna</item>
+        <item>Rodrigo Domínguez</item>
+        <item>Marisol Figueroa</item>
+        <item>Leonardo Salazar</item>
+        <item>Patricia Correa</item>
+        <item>Bruno Valencia</item>
+        <item>Carolina Villalobos</item>
+        <item>Jorge Cárdenas</item>
+        <item>Renata Guzmán</item>
+        <item>Ernesto Bravo</item>
+        <item>Margarita Fuentes</item>
+        <item>Fabián Montes</item>
+        <item>Sabrina Carrillo</item>
+        <item>Marcelo Beltrán</item>
+        <item>Angela Ponce</item>
+        <item>Agustín Medina</item>
+        <item>Inés Pacheco</item>
+        <item>Lorenzo Rivera</item>
+        <item>Milagros Vázquez</item>
+        <item>Antonio Lozano</item>
+        <item>Rocío Aranda</item>
+        <item>Héctor Naranjo</item>
+        <item>Gloria Farías</item>
+
+    </string-array>
+    <string-array name="days">
+        <item>LUNES</item>
+        <item>MARTES</item>
+        <item>MIERCOLES</item>
+        <item>JUEVES</item>
+        <item>VIERNES</item>
+    </string-array>
+</resources>

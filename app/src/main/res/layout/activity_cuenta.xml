@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CuentaActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/structuralSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="10dp">
+
+        <!-- Menú hamburguesa -->
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:contentDescription="Abrir menú"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/white" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cuenta"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center" />
+
+        <!-- Icono de perfil -->
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            app:tint="@color/white"
+            android:contentDescription="Abrir perfil" />
+    </LinearLayout>
+
+    <!-- Imagen y rol -->
+    <LinearLayout
+        android:id="@+id/mainDetails"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#C5CFE6"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="5dp"
+            android:src="@drawable/cuenta"
+            android:id="@+id/imageField"
+            android:background="@color/transparent"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50dp"
+            android:gravity="center"
+            android:paddingVertical="5dp"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Rol: "
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/rolField"
+                android:enabled="false"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="$rol"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/borde"
+                android:backgroundTint="@color/white"/>
+            
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@id/mainDetails"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <!-- nombre -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Nombre completo:"/>
+
+                <TextView
+                    android:id="@+id/nameField"
+                    android:enabled="false"
+                    android:layout_width="300dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="$nombre"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/borde"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+            <!-- Correo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Correo:"/>
+
+                <TextView
+                    android:id="@+id/mailField"
+                    android:enabled="false"
+                    android:layout_width="300dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="$correo"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/borde"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+
+            <!-- Curso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Grupo:"/>
+
+                <TextView
+                    android:id="@+id/groupField"
+                    android:enabled="false"
+                    android:layout_width="300dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="$grupo"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/borde"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+            <!-- RFID -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="RFID:"/>
+
+                <TextView
+                    android:id="@+id/rfidField"
+                    android:enabled="false"
+                    android:layout_width="300dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="$rfid"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/borde"
+                    android:backgroundTint="@color/white"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/logOutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Cerrar sesión"
+                android:backgroundTint="@color/red"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <fragment
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.presencia.Menu"
+        tools:layout="@layout/fragment_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

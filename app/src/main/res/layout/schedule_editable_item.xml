@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_gray"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Rango de tiempo -->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="14:30 - 15:30"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical" />
+
+        <!-- Etiqueta del grupo -->
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_label"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:text="DAM1B"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <!-- Etiqueta del aula -->
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_label"
+            android:text="A04"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="8dp"
+            android:gravity="center" />
+
+        <!-- Menú de tres puntos -->
+        <ImageView
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_vert"
+            android:contentDescription="Menú"
+            android:layout_marginStart="8dp"
+            app:tint="@android:color/black" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

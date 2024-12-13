@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListaAdminActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/structuralSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="10dp">
+
+        <!-- Menú hamburguesa -->
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:contentDescription="Abrir menú"
+            android:layout_marginEnd="8dp"
+            app:tint="@color/white" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Horario"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center" />
+
+        <!-- Icono de perfil -->
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_profile"
+            android:background="@null"
+            app:tint="@color/white"
+            android:contentDescription="Abrir perfil" />
+    </LinearLayout>
+
+    <!-- Barra de filtro -->
+    <LinearLayout
+        android:id="@+id/filterSelection"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        android:background="@color/structuralSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/autoGroupEdit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Grupo"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/borde"
+            android:backgroundTint="@color/white"/>
+
+        <TextView
+            android:id="@+id/autoClassroomEdit"
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/borde"
+            android:backgroundTint="@color/white"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Aula" />
+
+    </LinearLayout>
+
+    <!-- Items Asistencia -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/filterSelection"
+        app:layout_constraintBottom_toTopOf="@id/actionButtons">
+
+        <LinearLayout
+            android:id="@+id/attendanceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:id="@+id/actionButtons">
+
+        <Button
+            android:id="@+id/cancelList"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="10dp"
+            android:text="Cancelar"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/confirmList"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/black"
+            android:text="Confirmar"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <fragment
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="com.example.presencia.Menu"
+        tools:layout="@layout/fragment_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

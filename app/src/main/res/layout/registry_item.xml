@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="4dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:id="@+id/dataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/light_gray"
+        android:padding="5dp"
+        android:gravity="center_vertical">
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre"
+            android:textSize="16sp"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+
+
+            <!-- Etiqueta de la cantidad -->
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_label"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:text="X"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- / -->
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/quantity"
+                android:id="@+id/slashBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4dp"
+                android:text="/"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="8dp"
+                android:gravity="center" />
+
+            <!-- Etiqueta del total -->
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_label"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:text="Y"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/slashBar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- : -->
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/total"
+                android:id="@+id/dotsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:text=":"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="8dp"
+                android:gravity="center" />
+
+
+            <!-- Etiqueta del procentaje -->
+            <TextView
+                android:id="@+id/percent"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_label"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="4dp"
+                android:text="XX%"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/dotsText"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

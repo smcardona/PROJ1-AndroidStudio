@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Name"/>
+
+        <LinearLayout
+            android:id="@+id/typeContainer"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                style="@style/attend_type_selector"
+                android:id="@+id/correct"
+                android:src="@drawable/ic_tick"
+                android:backgroundTint="@color/sch_correct"/>
+
+            <ImageButton
+                style="@style/attend_type_selector"
+                android:id="@+id/justi"
+                android:src="@drawable/ic_tick"
+                android:backgroundTint="@color/sch_justi" />
+
+            <ImageButton
+                style="@style/attend_type_selector"
+                android:id="@+id/late"
+                android:src="@drawable/ic_clock"
+                android:backgroundTint="@color/sch_late" />
+
+            <ImageButton
+                style="@style/attend_type_selector"
+                android:id="@+id/miss"
+                android:src="@drawable/ic_x"
+                android:backgroundTint="@color/sch_miss" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

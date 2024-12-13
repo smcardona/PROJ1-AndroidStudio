@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <LinearLayout
+        android:id="@+id/menuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:background="@color/structuralSection"
+        android:minHeight="40dp">
+
+        <LinearLayout
+            android:id="@+id/scheduleNav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/scheduleIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                android:clickable="false"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/schedule"
+                tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario"
+                android:textColor="#f0f0f0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/attendanceNav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/attendanceIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                android:clickable="false"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/attendance"
+                tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asistencia"
+                android:textColor="#f0f0f0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registryNav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/registryIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                android:clickable="false"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/resource_return"
+                tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seguimiento"
+                android:textColor="#f0f0f0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

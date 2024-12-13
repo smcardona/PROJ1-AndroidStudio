@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="attend_type_selector" parent="TextAppearance.AppCompat">
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:backgroundTintMode">multiply</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/attend_select_btn_bg</item>
+    </style>
+
+    <style name="day_selector" parent="TextAppearance.AppCompat">
+        <item name="android:background">@drawable/day_selector_bg</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:backgroundTintMode">multiply</item>
+    </style>
+
+</resources>
