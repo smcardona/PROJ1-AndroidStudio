@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -85,6 +86,14 @@ public class ListaProfeActivity extends AppCompatActivity {
 
         }
 
+        ViewGroup actionButtons = findViewById(R.id.actionButtons);
+
+        for (int i = 0; i < actionButtons.getChildCount(); i++) {
+            Button btn = (Button) actionButtons.getChildAt(i);
+            btn.setOnClickListener( v ->
+                    startActivity(new Intent(this, AsistenciaProfeActivity.class))
+            );
+        }
 
         ImageButton profile = findViewById(R.id.profileButton);
         profile.setOnClickListener(v ->

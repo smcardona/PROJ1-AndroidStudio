@@ -40,7 +40,7 @@ public class AsistenciaAdminActivity extends AppCompatActivity {
         Button manualReviewButton = findViewById(R.id.manualReviewButton);
 
         manualReviewButton.setOnClickListener(v -> {
-            Intent intent = new Intent(this, ListaProfeActivity.class);
+            Intent intent = new Intent(this, ListaAdminActivity.class);
             intent.putExtra("group", groupSpinner.getSelectedItem().toString());
             intent.putExtra("room", classroomSpinner.getSelectedItem().toString());
 
