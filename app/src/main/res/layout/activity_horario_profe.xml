@@ -63,10 +63,10 @@
 
         <!-- Grupo Section -->
         <TextView
-            android:id="@+id/tv_grupo"
+            android:id="@+id/tv_profesor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Grupo"
+            android:text="Profesor"
             android:textSize="16sp"
             android:layout_marginBottom="16dp" />
 
@@ -75,13 +75,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/spinner_grupo"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/profeField"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
                 android:background="@android:drawable/editbox_background"
-                android:entries="@array/groups" />
+                android:text="$profesor" />
 
         </LinearLayout>
     </LinearLayout>

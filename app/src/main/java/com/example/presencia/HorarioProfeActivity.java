@@ -39,12 +39,17 @@ public class HorarioProfeActivity extends AppCompatActivity {
                 .runOnCommit(() -> menuFragment.setPageElementActive(Menu.Page.SCHEDULE))
                 .commit();
 
-        Spinner filterGrp = findViewById(R.id.spinner_grupo);
+        String profe = UtilRandom.pickRandomString(
+                getResources().getStringArray(R.array.professors)
+        );
+
+        TextView profeField = findViewById(R.id.profeField);
+        profeField.setText(profe);
         TextView dayText = findViewById(R.id.dayText);
 
         DaySelector daySelector = new DaySelector();
         daySelector.setOnDaySelectedListener(day -> {
-            renderSchedulesByGroup(filterGrp.getSelectedItem().toString(), day);
+            renderSchedulesByProfe(profe, day);
             dayText.setText(day.pascalName());
         });
 
@@ -53,28 +58,12 @@ public class HorarioProfeActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.daySelector, daySelector)
                 .runOnCommit(() -> {
-                    renderSchedulesByGroup(filterGrp.getSelectedItem().toString(), DaySelector.Day.LUNES);
+                    renderSchedulesByProfe(profe, DaySelector.Day.LUNES);
 
                     dayText.setText(DaySelector.Day.LUNES.pascalName());
                 })
                 .commit();
 
-
-        filterGrp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // Obtén el texto seleccionado
-                String selectedText = parent.getItemAtPosition(position).toString();
-
-                // Renderiza cuando cambie el valor
-                renderSchedulesByGroup(selectedText, daySelector.getSelectedDay());
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // Manejar caso en que no haya selección
-            }
-        });
 
         ImageButton profile = findViewById(R.id.profileButton);
         profile.setOnClickListener(v ->
@@ -84,13 +73,13 @@ public class HorarioProfeActivity extends AppCompatActivity {
 
     }
 
-    private void renderSchedulesByGroup(String filter, DaySelector.Day day) {
+    private void renderSchedulesByProfe(String filter, DaySelector.Day day) {
 
         LinearLayout ll = findViewById(R.id.scheduleContainer);
         ll.removeAllViews();
 
         for (HorarioManager.Horario h: HorarioManager.horarios.stream()
-                .filter(horario -> horario.group.equalsIgnoreCase(filter) && horario.day == day)
+                .filter(horario -> horario.profesor.equalsIgnoreCase(filter) && horario.day == day)
                 .collect(Collectors.toList())) {
 
             View inflater = LayoutInflater.from(this).inflate(R.layout.schedule_editable_item, ll, false);

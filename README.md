@@ -15,7 +15,7 @@ Admin tiene acceso a los horarios, pero tiene que filtrar por grupo de clase, o 
 Admin tiene acceso a pasar asistencia, pero tiene que especificar a que grupo y en que aula pasa la asistencia. <br>
 Admin tiene acceso a registros de asistencia aplicados a los alumnos filtrados por grupo. <br>
 <br>
-Profesor tiene acceso a los horarios filtrados por grupo de clase <br>
+Profesor tiene acceso a sus propios horarios que se le ha asignado. <br>
 Profesor tiene acceso a pasar asistencia, ya sea manualmente, o automaticamente obteniendo el horario actual de la API (no implementado) <br>
 Profesor tiene acceso a registros de asistencia aplicados a los alumnos filtrados por grupo. <br>
 <br>
