@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void startData() {
 
+        HorarioManager.restart();
+        AlumnoManager.restart();
+
         final String[] professors = getResources().getStringArray(R.array.professors);
         final String[] groups = getResources().getStringArray(R.array.groups);
         final String[] rooms = getResources().getStringArray(R.array.rooms);

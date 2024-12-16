@@ -10,6 +10,10 @@ public class AlumnoManager {
         alumnos.add(new Alumno(name, group));
     }
 
+    public static void restart() {
+        alumnos.clear();
+    }
+
     public static class Alumno {
         public final String name;
         public final String group;

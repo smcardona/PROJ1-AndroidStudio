@@ -10,6 +10,10 @@ public class HorarioManager {
         horarios.add(new Horario(start, end, group, room, profesor, day));
     }
 
+    public static void restart() {
+        horarios.clear();
+    }
+
     public static class Horario {
         public final String startHour;
         public final String endHour;
