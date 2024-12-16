@@ -96,16 +96,27 @@ public class MainActivity extends AppCompatActivity {
         final String[] studentNames = getResources().getStringArray(R.array.student_name_samples);
         final DaySelector.Day[] days = DaySelector.Day.values();
 
-        Random rand = new Random();
+        Random rnd = new Random();
+
+        final int maxProfessorCycle = professors.length;
+        final int maxRoomCycle = rooms.length;
+
 
         // 1. Asignar horarios a los grupos (14:00 - 21:00)
         for (String group : groups) {
             for (DaySelector.Day day : days) {  // Días de lunes a viernes
+
+                int cycleProfessor = rnd.nextInt(maxProfessorCycle);
+                int cycleRoom = rnd.nextInt(maxRoomCycle);
+
                 for (int hour = 14; hour <= 21; hour++) {  // Horas de 14:00 a 21:00
                     String start = hour + ":00";
                     String end = (hour + 1) + ":00";
-                    String room = rooms[rand.nextInt(rooms.length)];  // Aula aleatoria
-                    String professor = professors[rand.nextInt(professors.length)];  // Profesor aleatorio
+                    String room = rooms[cycleRoom];  // Aula ciclada
+                    String professor = professors[cycleProfessor];  // Profesor ciclado
+
+                    cycleProfessor = (cycleProfessor + 1) % maxProfessorCycle;
+                    cycleRoom = (cycleRoom + 1) % maxRoomCycle;
 
                     // Añadir horario
                     HorarioManager.add(start, end, group, room, professor, day);
@@ -116,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
         // 2. Asignar alumnos a los grupos
         int studentIndex = 0;
         for (String group : groups) {
-            // Crear un número de alumnos según el tamaño del grupo
+            // Distribuye los alumnos en los grupos
             for (int i = 0; i < studentNames.length / groups.length; i++) {
                 String studentName = studentNames[studentIndex++];
                 AlumnoManager.add(studentName, group);
